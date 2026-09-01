@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMS | The E-Millennial Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <header class="intro" id="intro">
+    <nav class="navbar">
+      <a href="#intro" class="logo">
+        <img src="assets/EMS.svg" alt="EMS logo" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+      </ul>
+
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <img src="assets/cart.svg" alt="" />
+        <span id="cartCount">0</span>
+      </button>
+    </nav>
+
+    <div class="intro-content">
+      <h1>THE<br />E-MILLENIAL<br />STORE</h1>
+      <img src="assets/heroImage.png" alt="A phone showing the EMS logo, surrounded by gadgets like a smartwatch, headphones, a scooter and a game controller" class="hero-image" />
+      <a href="#shop" class="btn btn-primary shop-now-btn">SHOP NOW</a>
+    </div>
+  </header>
+
+  
+  <section class="about" id="about">
+    <p>
+      E-Millenial Store is an hypothetical online store for gadgets we believe
+      every &lsquo;Millenial&rsquo; or &lsquo;Gen-Z&rsquo; should have today.
+      We&rsquo;ve got mobile phones, laptops, smartwatches and other gadgets.
+      Explore all our gadgets and choose the ones that suit you.
+    </p>
+  </section>
+
+  
+  <section class="shop" id="shop">
+    <h2>OUR GADGETS</h2>
+    <div class="product-grid" id="productGrid">
+    
+    </div>
+  </section>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <button class="close-cart" id="closeCart" aria-label="Close cart">&times;</button>
+    <h2>Your Cart</h2>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart-msg" id="emptyCartMsg">Your cart is empty.</p>
+    </div>
+
+    <form class="user-details-form" id="userDetailsForm" novalidate>
+      <h3>Your Details</h3>
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" />
+        <span class="error-msg" id="fullNameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" />
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="0201234567" />
+        <span class="error-msg" id="phoneError"></span>
+      </div>
+    </form>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">GHS 0.00</span>
+    </div>
+
+    <p class="error-msg" id="checkoutError"></p>
+
+    <div class="cart-actions">
+      <button class="btn btn-outline" id="continueShoppingBtn">Continue Shopping</button>
+      <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+
+  
+  <div class="overlay" id="summaryOverlay"></div>
+  <div class="summary-modal" id="summaryModal">
+    <img src="assets/check.svg" alt="" class="summary-check" />
+    <h2 id="summaryMessage">Thank you!</h2>
+    <div class="summary-items" id="summaryItems"></div>
+    <button class="btn btn-primary" id="summaryOkBtn">Ok</button>
+  </div>
+
+  
+  <footer class="site-footer">
+    <img src="assets/EMS.svg" alt="EMS logo" class="footer-logo" />
+    <p>Designed and Crafted by a Frontend Ninja</p>
+  </footer>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
